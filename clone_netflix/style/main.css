@@ -11,72 +11,66 @@
 
 body {
   background: var(--preta);
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Arial", Times, serif;
   color: white;
 }
 
-/* header */
+/* Header */
 
 header .container {
   display: flex;
-  justify-content: space-between;
-}
-
-.main-nav {
-  display: flex;
+  flex-direction: row;
   align-items: center;
-  list-style-type: none;
+  justify-content: unset;
 }
 
-.main-nav li:first-child {
-  margin-right: auto;
+.logo {
+  margin-left: 5px;
+  color: var(--vermelho);
+  font-family: "Arial Black", Times;
+  font-size: 40px;
 }
 
-.main-nav a {
-  font-size: 16px;
+nav {
+  margin-left: 40px;
+}
+
+nav a {
+  text-decoration: none;
   color: #aaa;
-  margin: 10px;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav ul li {
   text-decoration: none;
-  display: block;
+  display: inline-block;
 }
 
-.main-nav a:hover {
-  color: white;
-  margin: 10px;
-  text-decoration: none;
-  display: block;
+.secundary-nav {
+  margin-right: 50px;
+  margin-left: auto;
 }
 
-.nav-right {
-  display: flex;
-  margin-right: 20px;
-  align-items: center;
-}
-
-.logo img {
-  width: 180px;
-  height: 80px;
-}
-
-.fas {
-  font-family: sans-serif;
-  font-size: 20px;
-  margin-right: 20px;
+.secundary-nav a {
   text-decoration: none;
   color: white;
-}
-
-/* principal */
-
-.container {
   margin-left: 20px;
 }
 
+/* Fim Header */
+
+/* Container Principal - Filmes */
+
 .filme-principal {
   font-size: 16px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
     url("/img/capa-house.jpg");
-  height: 500px;
+
+  height: 400px;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -89,31 +83,37 @@ header .container {
   margin-bottom: 40px;
 }
 
-.titulo {
-  margin-top: 5%;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+.filme-principal .titulo {
+  margin-top: 15%;
   font-size: 40px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
-.btn {
+.botao {
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
-  font-size: 16px;
   color: white;
+
   padding: 15px 30px;
   margin-right: 15px;
+  font-size: 12px;
+
   cursor: pointer;
+  transition: 0.3s ease all;
 }
 
-.btn:hover {
+.botao:hover {
   background-color: white;
-  color: var(--preta);
-  transition: 0.5s ease all;
+  color: black;
 }
 
-.btn i {
+.botao i {
   margin-right: 8px;
+}
+
+.container {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .filme-principal .container {
@@ -124,8 +124,21 @@ header .container {
   height: 100%;
   width: 100%;
   display: block;
+  cursor: pointer;
 }
 
 .carrosel-filmes {
   margin-top: 5px;
+}
+
+.item {
+  width: auto;
+  height: auto;
+}
+
+/* Fim Container Principal Filmes */
+
+.categoria {
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
